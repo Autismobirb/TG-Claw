@@ -690,3 +690,288 @@
 /obj/machinery/door/airlock/glass_large/narsie_act()
 	return
 
+/////////////////////////////////
+/*
+	Vault Doors
+*/
+/obj/machinery/door/airlock/f13/
+	overlays_file = 'icons/obj/doors/airlocks/f13vault/overlays.dmi'
+	icon = 'icons/obj/doors/airlocks/f13vault/maintenance.dmi'
+/obj/machinery/door/airlock/f13/abandoned
+
+	abandoned = TRUE
+
+/obj/machinery/door/airlock/f13/command
+	icon = 'icons/obj/doors/airlocks/f13vault/command.dmi'
+	assemblytype = /obj/structure/door_assembly/door_assembly_com
+	normal_integrity = 450
+
+/obj/machinery/door/airlock/f13/security
+	icon = 'icons/obj/doors/airlocks/f13vault/security.dmi'
+	assemblytype = /obj/structure/door_assembly/door_assembly_sec
+	normal_integrity = 450
+
+/obj/machinery/door/airlock/f13/engineering
+	icon = 'icons/obj/doors/airlocks/f13vault/engineering.dmi'
+	assemblytype = /obj/structure/door_assembly/door_assembly_eng
+
+/obj/machinery/door/airlock/f13/engineering/abandoned
+	abandoned = TRUE
+
+/obj/machinery/door/airlock/f13/medical
+	icon = 'icons/obj/doors/airlocks/f13vault/medical.dmi'
+	assemblytype = /obj/structure/door_assembly/door_assembly_med
+
+/obj/machinery/door/airlock/f13/maintenance
+	name = "maintenance access"
+	icon = 'icons/obj/doors/airlocks/f13vault/maintenance.dmi'
+	assemblytype = /obj/structure/door_assembly/door_assembly_mai
+	normal_integrity = 250
+
+/obj/machinery/door/airlock/f13/maintenance/abandoned
+	abandoned = TRUE
+
+/obj/machinery/door/airlock/f13/mining
+	name = "mining airlock"
+	icon = 'icons/obj/doors/airlocks/f13vault/mining.dmi'
+	assemblytype = /obj/structure/door_assembly/door_assembly_min
+
+/obj/machinery/door/airlock/f13/atmos
+	name = "atmospherics airlock"
+	icon = 'icons/obj/doors/airlocks/f13vault/atmos.dmi'
+	assemblytype = /obj/structure/door_assembly/door_assembly_atmo
+
+/obj/machinery/door/airlock/f13/atmos/abandoned
+	abandoned = TRUE
+
+/obj/machinery/door/airlock/f13/research
+	icon = 'icons/obj/doors/airlocks/f13vault/research.dmi'
+	assemblytype = /obj/structure/door_assembly/door_assembly_research
+
+/obj/machinery/door/airlock/f13/freezer
+	name = "freezer airlock"
+	icon = 'icons/obj/doors/airlocks/f13vault/freezer.dmi'
+	assemblytype = /obj/structure/door_assembly/door_assembly_fre
+
+/obj/machinery/door/airlock/f13/science
+	icon = 'icons/obj/doors/airlocks/f13vault/science.dmi'
+	assemblytype = /obj/structure/door_assembly/door_assembly_science
+
+/obj/machinery/door/airlock/f13/virology
+	icon = 'icons/obj/doors/airlocks/f13vault/virology.dmi'
+	assemblytype = /obj/structure/door_assembly/door_assembly_viro
+
+/obj/machinery/door/airlock/f13/public
+	icon = 'icons/obj/doors/airlocks/f13vault/public.dmi'
+	assemblytype = /obj/structure/door_assembly/door_assembly_public
+
+/////////////////////////////////
+/*
+	Vault Glass
+*/
+
+
+/obj/machinery/door/airlock/f13/glass
+	icon = 'icons/obj/doors/airlocks/f13vault/maintenance.dmi'
+	opacity = 0
+	glass = TRUE
+
+/obj/machinery/door/airlock/f13/command/glass
+	opacity = 0
+	glass = TRUE
+	normal_integrity = 400
+
+/obj/machinery/door/airlock/f13/engineering/glass
+	opacity = 0
+	glass = TRUE
+
+/obj/machinery/door/airlock/f13/engineering/glass/critical
+	critical_machine = TRUE //stops greytide virus from opening & bolting doors in critical positions, such as the SM chamber.
+
+/obj/machinery/door/airlock/f13/security/glass
+	opacity = 0
+	glass = TRUE
+	normal_integrity = 400
+
+/obj/machinery/door/airlock/f13/security/glass/abandoned
+	abandoned = TRUE
+
+/obj/machinery/door/airlock/f13/medical/glass
+	opacity = 0
+	glass = TRUE
+
+/obj/machinery/door/airlock/f13/research/glass
+	opacity = 0
+	glass = TRUE
+
+/obj/machinery/door/airlock/f13/research/glass/incinerator
+	autoclose = FALSE
+	frequency = FREQ_AIRLOCK_CONTROL
+	heat_proof = TRUE
+	req_access = list(ACCESS_TOX)
+
+/obj/machinery/door/airlock/f13/research/glass/incinerator/toxmix_interior
+	name = "Mixing Room Interior Airlock"
+	id_tag = INCINERATOR_TOXMIX_AIRLOCK_INTERIOR
+
+/obj/machinery/door/airlock/f13/research/glass/incinerator/toxmix_exterior
+	name = "Mixing Room Exterior Airlock"
+	id_tag = INCINERATOR_TOXMIX_AIRLOCK_EXTERIOR
+
+/obj/machinery/door/airlock/f13/mining/glass
+	opacity = 0
+	glass = TRUE
+
+/obj/machinery/door/airlock/f13/atmos/glass
+	opacity = 0
+	glass = TRUE
+
+/obj/machinery/door/airlock/f13/atmos/glass/critical
+	critical_machine = TRUE //stops greytide virus from opening & bolting doors in critical positions, such as the SM chamber.
+
+/obj/machinery/door/airlock/f13/science/glass
+	opacity = 0
+	glass = TRUE
+
+/obj/machinery/door/airlock/f13/virology/glass
+	opacity = 0
+	glass = TRUE
+
+/obj/machinery/door/airlock/f13/maintenance/glass
+	opacity = 0
+	glass = TRUE
+
+/obj/machinery/door/airlock/f13/maintenance/external/glass
+	opacity = 0
+	glass = TRUE
+	normal_integrity = 200
+
+/obj/machinery/door/airlock/f13/public/glass
+	opacity = 0
+	glass = TRUE
+
+/////////////////////////////////
+/*
+	Vault Mineral
+*/
+
+/obj/machinery/door/airlock/f13/gold
+	name = "gold airlock"
+	icon = 'icons/obj/doors/airlocks/f13vault/gold.dmi'
+	assemblytype = /obj/structure/door_assembly/door_assembly_gold
+
+/obj/machinery/door/airlock/f13/gold/glass
+	opacity = 0
+	glass = TRUE
+
+/obj/machinery/door/airlock/f13/silver
+	name = "silver airlock"
+	icon = 'icons/obj/doors/airlocks/f13vault/silver.dmi'
+	assemblytype = /obj/structure/door_assembly/door_assembly_silver
+
+/obj/machinery/door/airlock/f13/silver/glass
+	opacity = 0
+	glass = TRUE
+
+/obj/machinery/door/airlock/f13/diamond
+	name = "diamond airlock"
+	icon = 'icons/obj/doors/airlocks/f13vault/diamond.dmi'
+	assemblytype = /obj/structure/door_assembly/door_assembly_diamond
+	normal_integrity = 1000
+	explosion_block = 2
+
+/obj/machinery/door/airlock/f13/diamond/glass
+	normal_integrity = 950
+	opacity = 0
+	glass = TRUE
+
+/obj/machinery/door/airlock/f13/uranium
+	name = "uranium airlock"
+	icon = 'icons/obj/doors/airlocks/f13vault/uranium.dmi'
+	assemblytype = /obj/structure/door_assembly/door_assembly_uranium
+	var/last_event = 0
+
+/obj/machinery/door/airlock/f13/uranium/process()
+	if(world.time > last_event+20)
+		if(prob(50))
+			radiate()
+		last_event = world.time
+	..()
+
+/obj/machinery/door/airlock/f13/uranium/proc/radiate()
+	radiation_pulse(get_turf(src), 150)
+	return
+
+/obj/machinery/door/airlock/f13/uranium/glass
+	opacity = 0
+	glass = TRUE
+
+/obj/machinery/door/airlock/f13/plasma
+	name = "plasma airlock"
+	desc = "No way this can end badly."
+	icon = 'icons/obj/doors/airlocks/f13vault/plasma.dmi'
+	assemblytype = /obj/structure/door_assembly/door_assembly_plasma
+
+/obj/machinery/door/airlock/f13/plasma/temperature_expose(datum/gas_mixture/air, exposed_temperature, exposed_volume)
+	if(exposed_temperature > 300)
+		PlasmaBurn(exposed_temperature)
+
+/obj/machinery/door/airlock/f13/plasma/proc/ignite(exposed_temperature)
+	if(exposed_temperature > 300)
+		PlasmaBurn(exposed_temperature)
+
+/obj/machinery/door/airlock/f13/plasma/proc/PlasmaBurn(temperature)
+	atmos_spawn_air("plasma=500;TEMP=1000")
+	var/obj/structure/door_assembly/DA
+	DA = new /obj/structure/door_assembly(loc)
+	if(glass)
+		DA.glass = TRUE
+	if(heat_proof)
+		DA.heat_proof_finished = TRUE
+	DA.update_icon()
+	DA.update_name()
+	qdel(src)
+
+/obj/machinery/door/airlock/f13/plasma/BlockSuperconductivity() //we don't stop the heat~
+	return 0
+
+/obj/machinery/door/airlock/f13/plasma/attackby(obj/item/C, mob/user, params)
+	if(C.is_hot() > 300)//If the temperature of the object is over 300, then ignite
+		message_admins("Plasma airlock ignited by [ADMIN_LOOKUPFLW(user)] in [ADMIN_VERBOSEJMP(src)]")
+		log_game("Plasma airlock ignited by [key_name(user)] in [AREACOORD(src)]")
+		ignite(C.is_hot())
+	else
+		return ..()
+
+/obj/machinery/door/airlock/f13/plasma/glass
+	opacity = 0
+	glass = TRUE
+
+/obj/machinery/door/airlock/f13/bananium
+	name = "bananium airlock"
+	desc = "Honkhonkhonk"
+	icon = 'icons/obj/doors/airlocks/f13vault/bananium.dmi'
+	assemblytype = /obj/structure/door_assembly/door_assembly_bananium
+	doorOpen = 'sound/items/bikehorn.ogg'
+
+/obj/machinery/door/airlock/f13/bananium/glass
+	opacity = 0
+	glass = TRUE
+
+/obj/machinery/door/airlock/f13/sandstone
+	name = "sandstone airlock"
+	icon = 'icons/obj/doors/airlocks/f13vault/sandstone.dmi'
+	assemblytype = /obj/structure/door_assembly/door_assembly_sandstone
+
+/obj/machinery/door/airlock/f13/sandstone/glass
+	opacity = 0
+	glass = TRUE
+
+/obj/machinery/door/airlock/f13/wood
+	name = "wooden airlock"
+	icon = 'icons/obj/doors/airlocks/f13vault/wood.dmi'
+	assemblytype = /obj/structure/door_assembly/door_assembly_wood
+
+/obj/machinery/door/airlock/f13/wood/glass
+	opacity = 0
+	glass = TRUE
